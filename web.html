@@ -12,11 +12,11 @@
         <!-- Абсолютные ссылки -->
         <li><a href="http://kubsu.ru/">Ссылка на главную страницу kubsu.ru (HTTP)</a></li>
         <li><a href="https://kubsu.ru/">Ссылка на главную страницу kubsu.ru (HTTPS)</a></li>
-    <!-- Раздел страницы для ссылки на фрагмент -->
-    <div id="bobr">
-        <h2>Фрагмент страницы</h2>
-        <p>Здесь находится БОБР</p>
-    </div>
+        <!-- Раздел страницы для ссылки на фрагмент -->
+        <div id="bobr">
+            <h2>Фрагмент страницы</h2>
+            <p>Здесь находится БОБР</p>
+        </div>
         <!-- Ссылка-изображение -->
         <li><a href="https://habr.com/ru/companies/tuturu/articles/673040/"><img src="https://habrastorage.org/r/w1560/webt/x0/q9/zy/x0q9zy1adn4irjoaveautfotibk.jpeg" alt="Ссылка-изображение" width=" 300" height=" 200"></a></li>
 
@@ -26,58 +26,53 @@
 
         <!-- Ссылка на фрагмент текущей страницы -->
         <li><a href="#bobr">Ссылка на фрагмент текущей страницы</a></li>
-        
+
         <!-- Ссылка с тремя параметрами в URL -->
-        <li><a href="name.html?">Ссылка с тремя параметрами</a></li>
+        <li><a href="name.html?user=veronika&ip=192.168.1.1&keyword=cat"> Ссылка с 3-мя параметрами</a></li>
 
         <!-- Ссылка с параметром id в URL -->
-        <li><a href="https://www.example.com/item?id=123">Ссылка с параметром id</a></li>
+        <li><a href="name.html?id=123">Ссылка с параметром id</a></li>
 
         <!-- Относительные ссылки -->
-        <li><a href="./page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-        <li><a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li><a href="../page.html">Относительная ссылка на страницу уровнем выше</a></li>
-        <li><a href="../../page.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
+        <li><a href="./name.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="./about.html">Относительная ссылка на страницу в каталоге about</a></li>
 
         <!-- Контекстная ссылка в тексте абзаца -->
         <li><p>Это информация <a href="https://habr.com/ru/companies/tuturu/articles/673040/">про бобров в тексте</a> в тексте абзаца.</p></li>
 
         <!-- Ссылка на фрагмент страницы стороннего сайта -->
-        <li><a href="https://www.example.com/page#section">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <li><a href="https://ru.wikipedia.org/w/index.php?title=Обыкновенный_бобр&veaction=edit&section=3">Ссылка на фрагмент страницы стороннего сайта</a></li>
 
         <!-- Ссылки из областей изображения -->
         <li>
-            <img src="https://via.placeholder.com/300x200" usemap="#imagemap" alt="Карта изображения">
-            <map name="imagemap">
-                <area shape="rect" coords="34,44,270,350" href="https://www.example.com" alt="Прямоугольная область">
-                <area shape="circle" coords="337,300,44" href="https://www.example.com" alt="Круглая область">
+            <span>Ссылки из прямоугольных и круглых областей</span><br>
+            <map name="map0">
+                <area shape="rect" alt="Прямоугольная область 1" coords="0,0,402,42" href="#area1">
+                <area shape="rect" alt="Прямоугольная область 2" coords="0,42,132,204" href="#area2">
+                <area shape="circle" alt="Круглая область" coords="180,100,90" href="#area3">
+                <area shape="rect" alt="Прямоугольная область 3" coords="0,0,402,204" href="#area4">
             </map>
+            <img src="bobr.jpg" width="402" height="204" usemap="#map0" alt="BOBR">
         </li>
-
         <!-- Ссылка с пустым href -->
-        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a href="#">Ссылка с пустым href</a></li>
 
         <!-- Ссылка без href -->
-        <li><a>Ссылка без href</a></li>
+        <li><a href="#">Ссылка без href</a></li>
 
-        <!-- Ссылка, по которой запрещен переход поисковикам -->
-        <li><a href="https://www.example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-
-        <!-- Ссылка, запрещенная для индексации -->
-        <li>
-            <meta name="robots" content="noindex">
-        </li>
+        <li><a href="https://moodle.kubsu.ru/enrol/index.php?id=780" rel="nofollow">Запрещен переход поисковикам</a></li>
+        <li><a href="https://moodle.kubsu.ru/enrol/index.php?id=780" rel="noindex">Запрещенная для индексации поисковиками</a></li>
 
         <!-- Нумерованный список ссылок с подписями title -->
         <li>
             <ol>
-                <li><a href="https://www.example.com" title="Описание первой ссылки">Первая ссылка</a></li>
-                <li><a href="https://www.example.com" title="Описание второй ссылки">Вторая ссылка</a></li>
+                <li><a href="web.html" title="Описание первой ссылки">Первая ссылка</a></li>
+                <li><a href="web.html" title="Описание второй ссылки">Вторая ссылка</a></li>
             </ol>
         </li>
 
         <!-- Ссылка на файл на сервере FTP с авторизацией -->
-        <li><a href="ftp://username:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP</a></li>
+        <li><a href="ftp://username:password@ftp.bobr.com/file.txt">Ссылка на файл на сервере FTP</a></li>
     </ul>
 
     

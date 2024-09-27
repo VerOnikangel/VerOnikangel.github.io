@@ -1,76 +1,215 @@
-body {
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание по веб-программированию</title>
+    
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="styles.css" >
+         <img class="logo" src="bobr.jpg" alt="БОБР">
+        <nav class="menu">
+            <a href="#hiper">Список гиперссылок</a><span> | </span>
+            <a href="#tabl">Таблица</a><span> | </span>
+            <a href="#forma">Форма</a>
+        </nav>
+        <div class="nazvanie">
+            <h3>САЙТ ПРО БОБРОВ И НЕ ТОЛЬКО</h3>
+        </div>
+    </header>
+    <div class="content" id="hiper">
+        <!-- Маркированный список гиперссылок -->
+        <ul>
+            <!-- Абсолютные ссылки -->
+            <li><a href="http://kubsu.ru/">Ссылка на главную страницу kubsu.ru (HTTP)</a></li>
+            <li><a href="https://kubsu.ru/">Ссылка на главную страницу kubsu.ru (HTTPS)</a></li>
+            <!-- Раздел страницы для ссылки на фрагмент -->
+            <div id="bobr">
+                <h2>Фрагмент страницы</h2>
+                <p>Здесь находится БОБР</p>
+            </div>
+            <!-- Ссылка-изображение -->
+            <li><a href="https://habr.com/ru/companies/tuturu/articles/673040/"><img src="https://habrastorage.org/r/w1560/webt/x0/q9/zy/x0q9zy1adn4irjoaveautfotibk.jpeg" alt="Ссылка-изображение" width=" 300" height=" 200"></a></li>
 
-header {
-    width: 100%;
-    /*���� �����*/
-    background-color: #633A34;
-    padding: 0;
-    margin: 0;
-    height: 120px;
-}
+            <!-- Сокращенные ссылки -->
+            <li><a href="./name.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+            <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
 
-.logo {
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin: 10px;
-}
+            <!-- Ссылка на фрагмент текущей страницы -->
+            <li><a href="#bobr">Ссылка на фрагмент текущей страницы</a></li>
 
-menu {
-    display: inline-block;
-    max-width: 50%;
-    float: right;
-    margin: 0;
-    /*���� ���� ���� � ��������*/
-    background-color: #FFE4E1;
-}
+            <!-- Ссылка с тремя параметрами в URL -->
+            <li><a href="name.html?user=veronika&ip=192.168.1.1&keyword=cat"> Ссылка с 3-мя параметрами</a></li>
 
-.nazvanie {
-    text-align: center;
-    background-color: #C08081;
-    padding: 10px;
-}
+            <!-- Ссылка с параметром id в URL -->
+            <li><a href="name.html?id=123">Ссылка с параметром id</a></li>
 
-.content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
-    /*���� ���� ��������*/
-    background-color: #8B6D5C;
-}
+            <!-- Относительные ссылки -->
+            <li><a href="./name.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+            <li><a href="./about.html">Относительная ссылка на страницу в каталоге about</a></li>
 
-footer {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    /*���� �������*/
-    background-color: #633A34;
-    height: 120px;
-}
+            <!-- Контекстная ссылка в тексте абзаца -->
+            <li><p>Это информация <a href="https://habr.com/ru/companies/tuturu/articles/673040/">про бобров в тексте</a> в тексте абзаца.</p></li>
 
-table {
-    font-size: 20px;
-    /*���� ������ �������*/
-    background-color: brown;
-}
+            <!-- Ссылка на фрагмент страницы стороннего сайта -->
+            <li><a href="https://ru.wikipedia.org/w/index.php?title=Обыкновенный_бобр&veaction=edit&section=3">Ссылка на фрагмент страницы стороннего сайта</a></li>
 
-td, th {
-    padding: 10px;
-    /*���� ������ �������*/
-    color: brown;
-}
+            <!-- Ссылки из областей изображения -->
+            <li>
+                <span>Ссылки из прямоугольных и круглых областей</span><br>
+                <map name="map0">
+                    <area shape="rect" alt="Прямоугольная область 1" coords="0,0,402,42" href="#area1">
+                    <area shape="rect" alt="Прямоугольная область 2" coords="0,42,132,204" href="#area2">
+                    <area shape="circle" alt="Круглая область" coords="180,100,90" href="#area3">
+                    <area shape="rect" alt="Прямоугольная область 3" coords="0,0,402,204" href="#area4">
+                </map>
+                <img src="bobr.jpg" width="402" height="204" usemap="#map0" alt="BOBR">
+            </li>
+            <!-- Ссылка с пустым href -->
+            <li><a href="#">Ссылка с пустым href</a></li>
 
-th {
-    /*���� ���� ���������� �������*/
-    background: #8B6D5C;
-}
-/*�������� ��������*/
-tr:nth-child(even) {
-    background-color: #FFE4E1;
-}
-/*������ ��������*/
-tr:nth-child(odd) {
-    background-color: #808080;
-}
+            <!-- Ссылка без href -->
+            <li><a href="#">Ссылка без href</a></li>
+
+            <li><a href="https://moodle.kubsu.ru/enrol/index.php?id=780" rel="nofollow">Запрещен переход поисковикам</a></li>
+            <li><a href="https://moodle.kubsu.ru/enrol/index.php?id=780" rel="noindex">Запрещенная для индексации поисковиками</a></li>
+
+            <!-- Нумерованный список ссылок с подписями title -->
+            <li>
+                <ol>
+                    <li><a href="web.html" title="Описание первой ссылки">Первая ссылка</a></li>
+                    <li><a href="web.html" title="Описание второй ссылки">Вторая ссылка</a></li>
+                </ol>
+            </li>
+
+            <!-- Ссылка на файл на сервере FTP с авторизацией -->
+            <li><a href="ftp://username:password@ftp.bobr.com/file.txt">Ссылка на файл на сервере FTP</a></li>
+        </ul>
+    </div>
+    <div class="content" id="tabl">
+        <table>
+            <caption>Results for 48th ICPC World Finals</caption>
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Team</th>
+                    <th>Award</th>
+                    <th>Solved problems</th>
+                    <th>Total time</th>
+                    <th>Time of last accepted submission</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Peking University</td>
+                    <td>Gold Medal</td>
+                    <td>9</td>
+                    <td>935</td>
+                    <td>241</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Moscow Institute of Physics and Technology</td>
+                    <td>Gold Medal</td>
+                    <td>9</td>
+                    <td>1212</td>
+                    <td>249</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tsinghua University</td>
+                    <td>Gold Medal</td>
+                    <td>9</td>
+                    <td>1218</td>
+                    <td>244</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>KAIST</td>
+                    <td>Silver Medal</td>
+                    <td>8</td>
+                    <td>868</td>
+                    <td>254</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>National University of Singapore</td>
+                    <td>Silver Medal</td>
+                    <td>8</td>
+                    <td>934</td>
+                    <td>254</td>
+                </tr>
+                <tr>
+                    <td>----></td>
+                    <td colspan="6">Problem G: Kindergarten not solved</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="content" id="forma">
+        <h1>Форма</h1>
+        <form action="/" method="POST">
+            <label for="field-name-1">
+                ФИО:<br>
+                <input id="field-name-1" name="field-name-1" placeholder="Петров Пётр Петрович" required>
+            </label><br>
+            <label for="phone">
+                Телефон:<br>
+                <input id="phone" type="tel" name="phone" placeholder="+7 (988) 987-65-43" required>
+            </label><br>
+            <label for="field-email">
+                Электронная почта:<br>
+                <input id="field-email" name="field-email" type="email" placeholder="abcdef@gmail.com" required>
+            </label><br>
+            <label for="field-date">
+                Дата рождения:<br>
+                <input id="field-date" name="field-date" value="1999-09-09" type="date" required>
+            </label><br>
+
+            Выберите пол:<br>
+            <label for="male">
+                <input id="male" type="radio" name="radio-group-1" value="Мужской" required> Мужской
+            </label><br>
+            <label for="female">
+                <input id="female" type="radio" name="radio-group-1" value="Женский"> Женский
+            </label><br>
+            <label for="field-lang">
+                Любимый язык программирования:<br>
+                <select id="field-lang" name="field-lang" required>
+                    <option value="" disabled selected>Выберите язык</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskell">Haskell</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                </select>
+            </label><br>
+            <label for="field-manytext">
+                Биография:<br>
+                <textarea id="field-manytext" name="fiel-manytext" placeholder="Ваша биография" required></textarea>
+            </label><br>
+            <label for="check">
+                <input id="check" type="checkbox" name="check" required>
+                С контрактом ознакомлен(а)
+            </label><br>
+            <input type="submit" name="save" value="Сохранить">
+        </form>
+    </div>
+    <h1 id="important">МЕНЯ ЗОВУТ ВЕРОНИКА</h1>
+    <footer class="page-footer">
+        <span>© Расторгуева Вероника</span>
+    </footer>
+
+</body>
+</html>

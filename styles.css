@@ -99,7 +99,7 @@ aside{
     padding: 10px;
     order: 2;
 }
-.form{
+.forma{
     order :4;
 }
 
@@ -122,7 +122,7 @@ aside{
     .tabl {
         order : 3;
     }
-    .form{
+    .forma{
         order :4;
     }
 }

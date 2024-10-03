@@ -69,6 +69,7 @@ th{
     font-size:small;
 }
 td, th {
+    width: 50px;
     padding: 10px;
     color: brown;
 }

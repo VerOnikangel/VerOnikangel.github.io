@@ -60,7 +60,9 @@ footer {
     font-size: 20px;
     background-color: brown;
 }
-
+td{
+    font-size: small;
+}
 td, th {
     padding: 10px;
     color: brown;

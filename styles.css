@@ -63,6 +63,11 @@ footer {
 td{
     font-size: small;
 }
+th{
+    background-color: silver;
+    padding: 5px;
+    font-size:small;
+}
 td, th {
     padding: 10px;
     color: brown;

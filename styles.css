@@ -1,14 +1,22 @@
 body {
     margin: 0;
-}
-
-header {
     width: 100%;
-    /*цвет шапки*/
-    background-color: #633A34;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color:  #633A34;
     padding: 0;
     margin: 0;
     height: 120px;
+    width: 100%;
+}
+aside{
+    flex: 1;
+}
+
+main{
+    flex: 4;
 }
 
 .logo {
@@ -19,11 +27,11 @@ header {
 }
 
 menu {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     max-width: 50%;
-    float: right;
     margin: 0;
-    /*цвет фона меню с ссылками*/
+ 
     background-color: #FFE4E1;
 }
 
@@ -34,10 +42,9 @@ menu {
 }
 
 .content {
-    max-width: 800px;
+    width: auto;
     margin: 20px auto;
     padding: 10px;
-    /*цвет фона контента*/
     background-color: #8B6D5C;
 }
 
@@ -45,33 +52,70 @@ footer {
     width: 100%;
     margin: 0;
     padding: 0;
-    /*цвет подвала*/
     background-color: #633A34;
     height: 120px;
 }
 
 table {
     font-size: 20px;
-    /*цвет границ таблицы*/
     background-color: brown;
 }
 
 td, th {
     padding: 10px;
-    /*цвет текста таблицы*/
     color: brown;
 }
 
 th {
-    /*цвет фона заголовков таблицы*/
     background: #8B6D5C;
 }
-/*нечетные элементы*/
 tr:nth-child(even) {
     background-color: #FFE4E1;
 }
-/*четные элементы*/
 tr:nth-child(odd) {
     background-color: #808080;
+}
+
+/* Mobile version */
+#mobile-version{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+aside{
+    order :1;
+}
+.hiper{
+    order: 3;
+}
+table {
+    order : 2;
+}
+.form{
+    order :4;
+}
+
+@media only screen and (min-width: 800px){
+    header{
+        display: flex;
+        flex-direction: row;
+        background-color: saddlebrown;
+    }
+    #mobile-version .content{
+        display:flex;
+        flex-direction: column;
+    }
+    aside{
+        order :1;
+    }
+    .hiper{
+        order: 2;
+    }
+    table {
+        order : 3;
+    }
+    .form{
+        order :4;
+    }
 }
 

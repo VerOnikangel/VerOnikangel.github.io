@@ -57,6 +57,7 @@ footer {
 }
 
 table {
+    max-width: 200px;
     font-size: 20px;
     background-color: brown;
 }

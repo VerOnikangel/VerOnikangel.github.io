@@ -2,6 +2,10 @@ body {
     margin: 0;
     width: 100%;
 }
+nav{
+    display: flex;
+    flex-direction: column;
+}
 header{
     display: flex;
     flex-direction: column;
@@ -45,8 +49,8 @@ menu {
 
 .content {
     width: auto;
-    margin: 20px auto;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     background-color: #8B6D5C;
 }
 

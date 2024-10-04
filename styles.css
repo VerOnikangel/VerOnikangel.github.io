@@ -116,7 +116,11 @@ table{
     }
    aside{
         order :1; 
+       background-color: bisque;
     }
+    nav{
+            flex-direction: row;
+        }
     .giper{
         order: 2;
     }

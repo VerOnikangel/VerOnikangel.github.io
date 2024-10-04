@@ -34,7 +34,7 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: orange;
-
+}
 .nazvanie {
     text-align: center;
     background-color: #C08081;

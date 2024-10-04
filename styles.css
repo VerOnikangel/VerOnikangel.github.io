@@ -4,7 +4,7 @@ body {
 }
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color:  #633A34;
     padding: 0;
     margin: 0;
@@ -13,9 +13,11 @@ header{
 }
 aside{
     flex: 1;
+    order: 2;
 }
 
 main{
+    order: 1;
     flex: 4;
 }
 
